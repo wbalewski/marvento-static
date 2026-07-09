@@ -22,21 +22,23 @@
     </div>
   </header>
 
-  <section class="section section-angled">
+  <section class="section section-angled section-pagehead">
     <div class="container event-layout">
       <div class="panel contact-media"><img src="/assets/images/2024/01/Marvento-Duo-flute-and-piano-chamber-music-performance-1-scaled.jpg" alt="Marvento Duo portrait" /></div>
       <div class="contact-box">
-        <h1>Contact <span>Marvento Duo</span></h1>
+        <h1 class="pagehead-heading">Contact <span>Marvento Duo</span></h1>
         <p>Do you have an idea for an event in your community?</p>
         <p>We would love to hear from you. After we receive your form, we will be in touch within 2-3 business days. You can also call us at 617-800-8038 or email marventoduo@gmail.com.</p>
 
-        <form name="book-event" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="book-event" />
-          <input name="name" required placeholder="Your name" />
-          <input name="email" type="email" required placeholder="Your email" />
-          <textarea name="message" required rows="5" placeholder="Tell us about your event idea"></textarea>
-          <button class="btn btn-accent" type="submit">Send Message</button>
-        </form>
+        <div class="form-card">
+          <form name="book-event" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="book-event" />
+            <input name="name" required placeholder="Your name" />
+            <input name="email" type="email" required placeholder="Your email" />
+            <textarea name="message" required rows="5" placeholder="Tell us about your event idea"></textarea>
+            <button class="btn btn-accent" type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
