@@ -14,3 +14,23 @@ if (toggle && links) {
     });
   });
 }
+
+document.querySelectorAll('.video-embed').forEach((wrapper) => {
+  const thumb = wrapper.querySelector('.video-thumb');
+  if (!thumb) return;
+
+  thumb.addEventListener('click', () => {
+    const videoId = wrapper.dataset.videoId;
+    const start = wrapper.dataset.start;
+    const src = `https://www.youtube.com/embed/${videoId}?autoplay=1${start ? `&start=${start}` : ''}`;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = 'YouTube video player';
+    iframe.frameBorder = '0';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+
+    wrapper.replaceChild(iframe, thumb);
+  });
+});
